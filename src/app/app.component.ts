@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
     WebViewer(
             {
                 path: '/public/webviewer',
-                licenseKey: environment.pdfTronLicense,
+                licenseKey: '',
                 fullAPI: false,
                 enableRedaction: true,
                 disableLogs: true,
