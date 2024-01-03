@@ -93,7 +93,7 @@ export class AppComponent implements OnInit{
                     img:
                         // eslint-disable-next-line max-len
                         '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve"><style type="text/css"> .st0{fill-rule:evenodd;clip-rule:evenodd;} .cls1{fill:#485056}</style><g><g><rect x="74.6" y="63.7" class="st0 cls1" width="104" height="20.4"/></g><g><rect x="74.6" y="114.4" class="st0 cls1" width="104" height="20.4"/></g><g><rect x="74.6" y="169.3" class="st0 cls1" width="39" height="20.4"/></g></g><path class="st0 cls1" d="M186.6,29.7h-120c-9.9,0-18,8.1-18,18v158c0,9.9,8.1,18,18,18h120c9.9,0,18-8.1,18-18v-158 C204.6,37.8,196.5,29.7,186.6,29.7z M104.3,206.9H69.5c-3.3,0-6-2.7-6-6V52.6c0-3.3,2.7-6,6-6h114.2c3.3,0,6,2.7,6,6v61.8h-85.4 C104.3,114.4,104.3,206.9,104.3,206.9z M177.8,204.6l-23.4-23.4l-23.3,23.3l-12-11.9l23.3-23.3l-23.2-23.2l12-12l23.2,23.2 l23.3-23.3l11.9,12l-23.3,23.3l23.4,23.4L177.8,204.6z"/></svg>',
-                    title: 'Mark for redaction',
+                    title: 'Add redaction annotation',
                     onClick: () => this.markForRedaction(viewer.Core.annotationManager.getSelectedAnnotations(), viewer),
                     dataElement: 'annotationMarkForRedactionButton'
                 },
@@ -102,7 +102,7 @@ export class AppComponent implements OnInit{
                     img:
                         // eslint-disable-next-line max-len
                         '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                    title: 'Download',
+                    title: 'Download file',
                     onClick: () => this.download(viewer),
                     dataElement: 'annotationDownloadButton'
                 },
@@ -111,7 +111,7 @@ export class AppComponent implements OnInit{
                     img:
                         // eslint-disable-next-line max-len
                         '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve"><style type="text/css"> .st0{fill-rule:evenodd;clip-rule:evenodd;} .cls1{fill:#485056}</style><g><g><rect x="74.6" y="63.7" class="st0 cls1" width="104" height="20.4"/></g><g><rect x="74.6" y="114.4" class="st0 cls1" width="104" height="20.4"/></g><g><rect x="74.6" y="169.3" class="st0 cls1" width="39" height="20.4"/></g></g><path class="st0 cls1" d="M186.6,29.7h-120c-9.9,0-18,8.1-18,18v158c0,9.9,8.1,18,18,18h120c9.9,0,18-8.1,18-18v-158 C204.6,37.8,196.5,29.7,186.6,29.7z M104.3,206.9H69.5c-3.3,0-6-2.7-6-6V52.6c0-3.3,2.7-6,6-6h114.2c3.3,0,6,2.7,6,6v61.8h-85.4 C104.3,114.4,104.3,206.9,104.3,206.9z M177.8,204.6l-23.4-23.4l-23.3,23.3l-12-11.9l23.3-23.3l-23.2-23.2l12-12l23.2,23.2 l23.3-23.3l11.9,12l-23.3,23.3l23.4,23.4L177.8,204.6z"/></svg>',
-                    title: 'Redact',
+                    title: 'Apply redactions',
                     onClick: () => this.redact(viewer),
                     dataElement: 'annotationRedactionButton'
                 }
@@ -175,7 +175,7 @@ export class AppComponent implements OnInit{
         const data = await this.getFileData(viewer);
         console.log(data);
         
-        FileSaver.saveAs(data)
+        // FileSaver.saveAs(data)
     }
 
     /**
